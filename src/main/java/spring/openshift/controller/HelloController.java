@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("/")
     public String index(){
-        return "This is a hello world message received from Openshifit!";
+        return "This is a hello world message received from Openshift!";
     }
 }
