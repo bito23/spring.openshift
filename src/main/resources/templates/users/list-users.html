@@ -2,11 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
@@ -20,7 +18,6 @@
     <h3>Openshift Sandbox</h3>
     <hr>
 
-    <!-- Add a button -->
     <a th:href="@{/users/graphic/showFormForAdd}"
        class="btn btn-primary btn-sm mb-3">
         Add User
@@ -47,13 +44,11 @@
             <td th:text="${tempUser.email}"/>
 
             <td>
-                <!-- Add "update" button/link -->
                 <a th:href="@{/users/graphic/showFormForUpdate(userId=${tempUser.id})}"
                    class="btn btn-info btn-sm">
                     Update
                 </a>
 
-                <!-- Add "delete" button/link -->
                 <a th:href="@{/users/graphic/remove(userId=${tempUser.id})}"
                    class="btn btn-danger btn-sm"
                    onclick="if (!(confirm('Are you sure you want to delete this user?'))) return false">
