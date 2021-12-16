@@ -36,7 +36,7 @@ public class UserGUIController {
     public String findAllUsers(Model model) {
         List<User> users = userService.findAll();
         model.addAttribute("users", users);
-        return "/users/list-users";
+        return "users/list-users";
     }
 
     @GetMapping("/showFormForAdd")
