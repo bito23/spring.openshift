@@ -43,7 +43,7 @@ public class UserGUIController {
     public String showFormForAdd(Model model) {
         User user = new User();
         model.addAttribute("user", user);
-        return "/users/user-form";
+        return "users/user-form";
     }
 
     @GetMapping("/showFormForUpdate")
@@ -51,6 +51,6 @@ public class UserGUIController {
                                     Model model) throws UsernameNotFoundException {
         User user = userService.findById(theId);
         model.addAttribute("user", user);
-        return "/users/user-form";
+        return "users/user-form";
     }
 }
