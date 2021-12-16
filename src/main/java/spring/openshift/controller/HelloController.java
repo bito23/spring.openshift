@@ -1,12 +1,12 @@
 package spring.openshift.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 
-@RestController
+@Controller
 public class HelloController {
-    @GetMapping("/")
-    public String index(){
-        return "This is a hello world message received from Openshifit!";
+    public String index(Model model) {
+        model.addAttribute("message", "This is a hello world message received from Openshift!");
+        return "index";
     }
 }

@@ -36,7 +36,7 @@ public class UserController {
     }
 
     @DeleteMapping("/remove/{id}")
-    public String deleteEmployee(@PathVariable int id) throws UsernameNotFoundException {
+    public String deleteUser(@PathVariable int id) throws UsernameNotFoundException {
         userService.deleteById(id);
         return "User with id " + id + " was deleted successfully";
     }
@@ -50,5 +50,4 @@ public class UserController {
     public List<User> findAllUsers() {
         return userService.findAll();
     }
-
 }
